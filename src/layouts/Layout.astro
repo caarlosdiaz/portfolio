@@ -5,18 +5,25 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Carlos Díaz</title>
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
 
-<style>
-	html,
+<style is:global>
+	:root {
+		color-scheme: ligth dark;
+	}
+
+	html {
+		font-family: system-ui, sans-serif;
+	}
+	
 	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+		display: flex;
+		justify-content: center;
+		height: 100vh;
 	}
 </style>

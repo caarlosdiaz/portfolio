@@ -1,0 +1,41 @@
+---
+import type { SiteConfig } from "@types";
+
+type Props = Pick<SiteConfig, "author" | "socialLinks">;
+
+const { author, socialLinks } = Astro.props;
+const currentYear = new Date().getFullYear();
+---
+
+<footer
+  class="text-white w-full text-center pb-8 pt-5 px-5 border-t border-neutral/20"
+>
+  <ul class="flex flex-wrap gap-x-5 justify-center mb-5 text-xs">
+    {
+      socialLinks.map(({ text, href }) => (
+        <li>
+          <a
+            href={href}
+            target="_blank"
+            class="hover:text-primary inline-block py-3 px-4 after:relative after:bottom-[-4px] after:content-[url(/external.svg)]"
+          >
+            {text}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+  <p class="text-xs">
+    {author} © {currentYear}. <span class="text-neutral"
+      >Developed by</span
+    > Carlos Díaz
+  </p>
+  <div class="text-xs text-neutral mt-4">
+    <p>
+      Flutter, Python, FastAPI, PostgreSQL, Docker, Astro, Pandas, C#, .NET, and HL7 FHIR are trademarks or registered trademarks of their respective owners.
+    </p>
+    <p>
+      <span class="font-bold">Apple</span> and the <span class="font-bold">Apple logo</span> are trademarks of Apple Inc., registered in the U.S. and other countries. <span class="font-bold">App Store</span> is a service mark of Apple Inc.
+    </p>
+  </div>
+</footer>

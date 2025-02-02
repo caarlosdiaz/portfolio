@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+import type { TechnologyProps } from "@types";
+
+interface Props {
+    technologies: TechnologyProps[];
+}
+
+const { technologies } = Astro.props;
+---
+
+<div class="flex flex-wrap content-center justify-center gap-4 mb-24">
+    {technologies.map(({ image, name }) => (
+        <div class="flex flex-col items-center">
+            <Image
+                class="w-10 h-10 object-contain rounded-sm"
+                src={image}
+                alt={name}
+                width={40}
+                height={40}
+            />
+            <span class="text-sm text-gray-500 mt-1">{name}</span>
+        </div>
+    ))}
+</div>
+

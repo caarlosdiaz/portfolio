@@ -90,7 +90,7 @@ export const SITE_CONTENT: SiteContent = {
       endDate: "January 2025",
       summary: [
         "Developed and maintained microservices using .NET and C# in the R&D (Research and Development) department.",
-        "Implemented design patterns, reducing development time by 30% and improving code maintainability.",
+        "Used design patterns to enhance code structure, maintainability, and scalability.",
         "Contributed to HL7 FHIR integrations, enhancing interoperability between healthcare systems.",
         "Conducted testing to ensure high-quality, reliable software solutions.",
         "Part-time position while completing an Informatics Engineering degree."

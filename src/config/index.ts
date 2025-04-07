@@ -50,6 +50,11 @@ const Hl7Fhir: TechnologyProps = {
   image: "/hl7_fhir.png"
 }
 
+const NextJs: TechnologyProps = {
+  name: "Next.js",
+  image: "/nextjs.png"
+}
+
 export const SITE_CONFIG: SiteConfig = {
   title: "Carlos Díaz — Software Engineer",
   author: "Carlos Díaz Abad",
@@ -96,10 +101,10 @@ export const SITE_CONTENT: SiteContent = {
   projects: [
     {
       name: "Atheres Fit",
-      summary: "A fitness platform designed to help athletes and trainers track and analyze workouts. The MVP is available now on the Apple App Store.",
+      summary: "A fitness platform with a mobile app for athletes and a web dashboard for trainers. MVP live on the App Store.",
       linkPreview: "https://atheresfit.com",
       image: "/atheres_fit.png",
-      technologies: []
+      technologies: [Flutter, NextJs, PostgreSQL]
     },
     {
       name: "Fesho",
@@ -112,10 +117,9 @@ export const SITE_CONTENT: SiteContent = {
     {
       name: "Monuments ETL",
       summary: "An ETL pipeline processing Spanish monuments from diverse data sources, with a frontend displaying them on an interactive map.",
-      linkPreview: "/",
       linkSource: "https://github.com/SrIzan03/iei-code",
       image: "/iei_etl.png",
-      technologies: [Python, Pandas, FastAPI, PostgreSQL, Astro,]
+      technologies: [Python, Pandas, FastAPI, PostgreSQL, Astro, Docker]
     },
   ],
   about: {

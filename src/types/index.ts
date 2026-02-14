@@ -24,6 +24,7 @@ export interface HeroProps {
 export interface ExperienceProps {
   company: string;
   position: string;
+  department?: string;
   startDate: string;
   endDate: string;
   summary: string | string[];

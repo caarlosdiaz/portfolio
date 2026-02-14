@@ -55,6 +55,11 @@ const NextJs: TechnologyProps = {
   image: "/nextjs.png"
 }
 
+const Kubernetes: TechnologyProps = {
+  name: "Kubernetes",
+  image: "/k8s.png"
+}
+
 export const SITE_CONFIG: SiteConfig = {
   title: "Carlos Díaz — Software Engineer",
   author: "Carlos Díaz Abad",
@@ -83,6 +88,20 @@ export const SITE_CONTENT: SiteContent = {
       "I specialize in backend development and artificial intelligence solutions.",
   },
   experience: [
+    {
+      company: "Denmark Technical University",
+      position: "Research Software Engineer",
+      department: "Department of Applied Mathematics and Computer Science - Dynamical Systems Section",
+      startDate: "November 2025",
+      endDate: "Present",
+      summary: [
+        "Develop machine learning and statistical models for complex dynamical systems, spanning stochastic and deterministic processes.",
+        "Design and implement end-to-end forecasting and optimization pipelines for large-scale temporal and spatial datasets.",
+        "Transform research into production-oriented, scalable, and maintainable software solutions.",
+        "Bridge research and engineering by preparing models for deployment, validation, and operational use.",
+      ],
+      technologies: [Python, DotNet, Kubernetes, Docker]
+    },
     {
       company: "Resiplus ADDInformatica",
       position: "Software Engineer R&D",

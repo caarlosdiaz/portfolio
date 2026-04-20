@@ -1,74 +1,80 @@
 import type { SiteConfig, SiteContent, TechnologyProps } from "@types";
 
-const Flutter : TechnologyProps = {
+const Flutter: TechnologyProps = {
   name: "Flutter",
-  image: "/flutter.png"
-}
+  image: "/flutter.png",
+};
 
-const Python : TechnologyProps = {
+const Python: TechnologyProps = {
   name: "Python",
-  image: "/python.png"
-}
+  image: "/python.png",
+};
 
-const FastAPI : TechnologyProps = {
+const FastAPI: TechnologyProps = {
   name: "FastAPI",
-  image: "/FastAPI.png"
-}
+  image: "/FastAPI.png",
+};
 
-const PostgreSQL : TechnologyProps = {
+const PostgreSQL: TechnologyProps = {
   name: "PostgreSQL",
-  image: "/PostgreSQL.png"
-}
+  image: "/PostgreSQL.png",
+};
 
-const Docker : TechnologyProps = {
+const Docker: TechnologyProps = {
   name: "Docker",
-  image: "/docker.png"
-}
+  image: "/docker.png",
+};
 
-const Astro : TechnologyProps = {
-  name: "Astro",
-  image: "/astro.png"
-}
-
-const Pandas : TechnologyProps = {
+const Pandas: TechnologyProps = {
   name: "Pandas",
-  image: "/pandas.svg"
-}
+  image: "/pandas.svg",
+};
 
-const CSharp : TechnologyProps = {
+const CSharp: TechnologyProps = {
   name: "C#",
-  image: "/csharp.png"
-}
+  image: "/csharp.png",
+};
 
-const DotNet : TechnologyProps = {
+const DotNet: TechnologyProps = {
   name: ".NET",
-  image: "/dotnet.png"
-}
+  image: "/dotnet.png",
+};
 
 const Hl7Fhir: TechnologyProps = {
   name: "HL7 FHIR",
-  image: "/hl7_fhir.png"
-}
+  image: "/hl7_fhir.png",
+};
 
 const NextJs: TechnologyProps = {
   name: "Next.js",
-  image: "/nextjs.png"
-}
+  image: "/nextjs.png",
+};
 
 const Kubernetes: TechnologyProps = {
   name: "Kubernetes",
-  image: "/k8s.png"
-}
+  image: "/k8s.png",
+};
+
+const PyTorch: TechnologyProps = {
+  name: "PyTorch",
+  image: "/pytorch.svg",
+};
+
+const Transformers: TechnologyProps = {
+  name: "Transformers",
+  image: "/hf-logo.svg",
+};
 
 export const SITE_CONFIG: SiteConfig = {
-  title: "Carlos Díaz — Software Engineer",
+  title: "Carlos Díaz - Software Engineer",
   author: "Carlos Díaz Abad",
   description:
-    "Software Engineer based in Spain. I specialize in backend development and artificial intelligence.",
+    "Software Engineer based in Copenhagen. I work at the intersection of backend systems and artificial intelligence.",
   lang: "en",
   siteLogo: "/carlos_big.jpeg",
   navLinks: [
     { text: "Experience", href: "#experience" },
+    { text: "Education", href: "#education" },
     { text: "Projects", href: "#projects" },
     { text: "About", href: "#about" },
   ],
@@ -85,22 +91,23 @@ export const SITE_CONTENT: SiteContent = {
     name: "Carlos Díaz",
     specialty: "Software Engineer",
     summary:
-      "I specialize in backend development and artificial intelligence solutions.",
+      "Based in Copenhagen. I work on applied ML research end-to-end, from model design to the pipelines and compute that run it.",
   },
   experience: [
     {
       company: "Denmark Technical University",
       position: "Research Software Engineer",
-      department: "Department of Applied Mathematics and Computer Science - Dynamical Systems Section",
+      department:
+        "Department of Applied Mathematics and Computer Science - Dynamical Systems Section",
       startDate: "November 2025",
       endDate: "Present",
       summary: [
-        "Develop machine learning and statistical models for complex dynamical systems, spanning stochastic and deterministic processes.",
-        "Design and implement end-to-end forecasting and optimization pipelines for large-scale temporal and spatial datasets.",
-        "Transform research into production-oriented, scalable, and maintainable software solutions.",
-        "Bridge research and engineering by preparing models for deployment, validation, and operational use.",
+        "Build and maintain a data pipeline processing 30 years of weather, road survey, and maintenance data across millions of road segments in Denmark, extending to European cities including Lisbon, Zagreb, Zilina, and Tartu in collaboration with local road authorities.",
+        "Implement road deterioration forecasting using Dynamic Bayesian Networks and Palmgren-Miner fatigue models, integrating short-term and long-term climate forecasts with road condition assessments to optimize maintenance scheduling.",
+        "Engineer feature extraction from heterogeneous temporal and spatial datasets to feed probabilistic and deterioration models.",
+        "Deploy and run experiments on a NVIDIA GPU cluster, transitioning local workflows to accelerated compute.",
       ],
-      technologies: [Python, DotNet, Kubernetes, Docker]
+      technologies: [Python, PyTorch, Kubernetes, Docker],
     },
     {
       company: "Resiplus ADDInformatica",
@@ -108,42 +115,72 @@ export const SITE_CONTENT: SiteContent = {
       startDate: "October 2023",
       endDate: "January 2025",
       summary: [
-        "Developed and maintained microservices using .NET and C# in the R&D (Research and Development) department.",
-        "Used design patterns to enhance code structure, maintainability, and scalability.",
-        "Contributed to HL7 FHIR integrations, enhancing interoperability between healthcare systems.",
-        "Conducted testing to ensure high-quality, reliable software solutions.",
-        "Part-time position while completing an Informatics Engineering degree."
+        "Developed a C#/.NET pipeline (4 microservices) that auto-generated ERP documentation from Git commit parsing code Deltas against DSL-defined XML schemas, extracting domain logic, and producing context-aware Markdown and PDF manuals.",
+        "Developed HL7 FHIR integration services acting as a data exchange gateway between the internal ERP and external healthcare systems.",
       ],
-      technologies: [CSharp, DotNet, Hl7Fhir]
+      technologies: [CSharp, DotNet, Hl7Fhir],
+    },
+  ],
+  education: [
+    {
+      institution: "ETH Zürich",
+      degree: "MSc in Computer Science (SEMP Scholarship)",
+      location: "Zürich, Switzerland",
+      startDate: "2026",
+      endDate: "2027",
+    },
+    {
+      institution: "University of Copenhagen",
+      degree: "MSc in Computer Science",
+      location: "Copenhagen, Denmark",
+      startDate: "2025",
+      endDate: "2027",
+      highlight:
+        "Relevant coursework: Machine Learning, Deep Learning, Online and Reinforcement Learning, Advanced Computer Systems, Recommender Systems, Big Data Systems, Search Engines.",
+    },
+    {
+      institution: "Polytechnic University of Valencia",
+      degree: "BEng in Informatics Engineering",
+      location: "Valencia, Spain",
+      startDate: "2021",
+      endDate: "2025",
+      highlight:
+        "Academic excellence distinctions in Industrial Formal Methods, Databases and Information Systems, and Model-Driven Software Development.",
     },
   ],
   projects: [
     {
+      name: "Hybrid Recommender System",
+      date: "2025 - University of Copenhagen",
+      summary:
+        "Collaborative filtering (KNN, SVD via scikit-surprise) and content-based (TF-IDF, GloVe, DistilBERT via HF transformers) models on a 98% sparse Amazon dataset, with NumPy/Pandas feature pipelines. A Reciprocal Rank Fusion ensemble of SVD + TF-IDF lifted coverage from 20% to 40% while preserving ranking quality. Also explored Qwen 3.5-4B item descriptions as a metadata replacement.",
+      linkSource: "https://github.com/caarlosdiaz/recsys-ucph",
+      image: "/hybrid_recommender_architecture.svg",
+      technologies: [Python, PyTorch, Pandas, Transformers],
+    },
+    {
       name: "Atheres Fit",
-      summary: "A fitness platform with a mobile app for athletes and a web dashboard for trainers. MVP live on the App Store.",
-      linkPreview: "https://atheresfit.com",
+      date: "2025 - Past project",
+      summary:
+        "A cross-platform fitness platform connecting athletes and trainers, with a web dashboard where trainers generated AI-tailored workout plans that auto-adjusted loads per athlete. MVP shipped to the Apple App Store.",
       image: "/atheres_fit.png",
-      technologies: [Flutter, NextJs, PostgreSQL]
+      technologies: [Flutter, NextJs, PostgreSQL],
     },
     {
       name: "Fesho",
-      summary: "An habit tracker with social media features and analytics. It was featured in the UPV ETSINF expo.",
-      linkPreview: "https://www.feriaetsinf.org/proyectos/aplicaciones#:~:text=APP%2D11,Fesho",
+      date: "2025 - Past project",
+      summary:
+        "A habit tracker with social features and analytics. Featured at the UPV ETSINF expo.",
+      linkPreview:
+        "https://www.feriaetsinf.org/proyectos/aplicaciones#:~:text=APP%2D11,Fesho",
       linkSource: "https://github.com/fes-ho/PIN-Code",
       image: "/fesho.png",
-      technologies: [Python, FastAPI, PostgreSQL, Flutter]
-    },
-    {
-      name: "Monuments ETL",
-      summary: "An ETL pipeline processing Spanish monuments from diverse data sources, with a frontend displaying them on an interactive map.",
-      linkSource: "https://github.com/SrIzan03/iei-code",
-      image: "/iei_etl.png",
-      technologies: [Python, Pandas, FastAPI, PostgreSQL, Astro, Docker]
+      technologies: [Python, FastAPI, PostgreSQL, Flutter],
     },
   ],
   about: {
     description: `
-      Hi, I’m Carlos Díaz, a Software Engineer with a solid background in backend development and a growing passion for Artificial Intelligence. I’m deeply interested in the theoretical aspects of AI, constantly exploring its concepts, algorithms, and how it can shape the future of technology. I focus on building efficient, scalable systems while continuously expanding my knowledge in AI to better understand its potential. In addition to my technical skills, I have a strong interest in entrepreneurship and enjoy finding innovative ways to bring new ideas to life. My journey is about learning, growing, and contributing to the future of technology.
+      Hi, I’m Carlos Díaz, a research software engineer based in Copenhagen, working across ML and software engineering. I’m currently at the Technical University of Denmark, where I build probabilistic models and data pipelines that forecast road deterioration across European cities. I’m also doing an MSc in Computer Science at the University of Copenhagen, and in 2026 I’ll be at ETH Zürich on a SEMP scholarship. Before research, I shipped production services in C#/.NET, including HL7 FHIR healthcare integrations. Outside of work, I enjoy prototyping product ideas with friends.
     `,
     image: "/carlos_big.jpeg",
   },

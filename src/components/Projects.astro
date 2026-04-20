@@ -15,7 +15,7 @@ const { projects } = Astro.props;
   {
     projects.map(
       (
-        { name, summary, image, linkPreview, linkSource, technologies },
+        { name, summary, date, image, linkPreview, linkSource, technologies },
         index,
       ) => {
         const top = 98 + index * 40;
@@ -25,11 +25,16 @@ const { projects } = Astro.props;
               style={`top: ${top}px;`}
               class="rounded-2xl border border-neutral/20 bg-black mb-12 sm:sticky"
             >
-              <div class="w-full h-[580px] md:h-96 relative z-[1] bg-[#1c232d]/85 bg-difu before:content-[''] before:rounded-2xl before:absolute before:z-[-1] before:opacity-[5%] before:inset-0 before:bg-[url(/raja.png)] before:bg-repeat before:bg-[length:128px] rounded-2xl grid grid-rows-2 sm:grid-rows-1 sm:grid-cols-2">
-                <div class="px-6 pt-12">
-                  <h3 class="text-3xl font-medium font-serif mb-5 text-primary">
+              <div class="w-full min-h-[580px] md:min-h-96 relative z-[1] bg-[#1c232d]/85 bg-difu before:content-[''] before:rounded-2xl before:absolute before:z-[-1] before:opacity-[5%] before:inset-0 before:bg-[url(/raja.png)] before:bg-repeat before:bg-[length:128px] rounded-2xl grid grid-rows-2 sm:grid-rows-1 sm:grid-cols-2">
+                <div class="px-6 pt-12 pb-8">
+                  <h3 class="text-3xl font-medium font-serif mb-1 text-primary">
                     {name}
                   </h3>
+                  {date ? (
+                    <span class="block text-sm text-white/60 mb-4">{date}</span>
+                  ) : (
+                    <div class="mb-4" />
+                  )}
                   <p class="text-neutral text-base">{summary}</p>
                   <div class="pt-10 flex gap-5 text-white">
                     {linkSource ? (

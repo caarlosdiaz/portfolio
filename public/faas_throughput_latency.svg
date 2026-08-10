@@ -1,0 +1,97 @@
+<svg viewBox="0 0 840 640" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <g transform="translate(40,40)">
+  <rect x="0" y="0" width="760" height="560" rx="16" fill="#F7F8FA"/>
+
+  <!-- Title -->
+  <text x="60" y="46" font-family="Georgia, 'Times New Roman', serif" font-size="22" font-weight="700" fill="#1B2430">Throughput vs. tail latency, by Kafka partition count</text>
+  <text x="60" y="68" font-size="12.5" fill="#5B6472">CheckoutWorkflow, workflows topic, skew s = 0</text>
+
+  <!-- Plot area border -->
+  <line x1="120" y1="110" x2="120" y2="430" stroke="#1B2430" stroke-width="1.3"/>
+  <line x1="120" y1="430" x2="640" y2="430" stroke="#1B2430" stroke-width="1.3"/>
+  <line x1="640" y1="110" x2="640" y2="430" stroke="#1B2430" stroke-width="1.3"/>
+
+  <!-- Y gridlines (shared) -->
+  <g stroke="#E2E5EA" stroke-width="1">
+    <line x1="120" y1="110" x2="640" y2="110"/>
+    <line x1="120" y1="174" x2="640" y2="174"/>
+    <line x1="120" y1="238" x2="640" y2="238"/>
+    <line x1="120" y1="302" x2="640" y2="302"/>
+    <line x1="120" y1="366" x2="640" y2="366"/>
+  </g>
+
+  <!-- Left axis labels: latency ms -->
+  <g font-size="11" fill="#B45309">
+    <text x="108" y="114" text-anchor="end">250</text>
+    <text x="108" y="178" text-anchor="end">200</text>
+    <text x="108" y="242" text-anchor="end">150</text>
+    <text x="108" y="306" text-anchor="end">100</text>
+    <text x="108" y="370" text-anchor="end">50</text>
+    <text x="108" y="434" text-anchor="end">0</text>
+  </g>
+
+  <!-- Right axis labels: throughput req/s -->
+  <g font-size="11" fill="#4F46E5">
+    <text x="652" y="114">120</text>
+    <text x="652" y="178">96</text>
+    <text x="652" y="242">72</text>
+    <text x="652" y="306">48</text>
+    <text x="652" y="370">24</text>
+    <text x="652" y="434">0</text>
+  </g>
+
+  <!-- X axis categorical ticks -->
+  <g font-size="12" fill="#1B2430">
+    <text x="170" y="450" text-anchor="middle">1</text>
+    <text x="300" y="450" text-anchor="middle">2</text>
+    <text x="430" y="450" text-anchor="middle">5</text>
+    <text x="560" y="450" text-anchor="middle">10</text>
+  </g>
+  <text x="380" y="480" text-anchor="middle" font-size="12.5" fill="#1B2430" font-weight="600">Kafka partitions (workflows topic)</text>
+
+  <!-- axis titles rotated -->
+  <text x="30" y="270" text-anchor="middle" font-size="12.5" fill="#B45309" font-weight="600" transform="rotate(-90 30 270)">p95 latency (ms)</text>
+  <text x="712" y="270" text-anchor="middle" font-size="12.5" fill="#4F46E5" font-weight="600" transform="rotate(-90 712 270)">Throughput (req/s)</text>
+
+  <!-- Latency line (amber/rust) -->
+  <polyline points="170,142 300,257 430,349 560,374" fill="none" stroke="#B45309" stroke-width="2.2"/>
+  <circle cx="170" cy="142" r="6" fill="#B45309"/>
+  <circle cx="300" cy="257" r="6" fill="#B45309"/>
+  <circle cx="430" cy="349" r="6" fill="#B45309"/>
+  <circle cx="560" cy="374" r="6" fill="#B45309"/>
+  <text x="170" y="128" text-anchor="middle" font-size="11" fill="#B45309" font-weight="600">225 ms</text>
+  <text x="300" y="243" text-anchor="middle" font-size="11" fill="#B45309" font-weight="600">135 ms</text>
+  <text x="430" y="335" text-anchor="middle" font-size="11" fill="#B45309" font-weight="600">63 ms</text>
+  <text x="560" y="392" text-anchor="middle" font-size="11" fill="#B45309" font-weight="600">44 ms</text>
+
+  <!-- Throughput line (indigo) -->
+  <polyline points="170,302 300,211 430,142 560,137" fill="none" stroke="#4F46E5" stroke-width="2.2"/>
+  <circle cx="170" cy="302" r="6" fill="#4F46E5"/>
+  <circle cx="300" cy="211" r="6" fill="#4F46E5"/>
+  <circle cx="430" cy="142" r="6" fill="#4F46E5"/>
+  <circle cx="560" cy="137" r="6" fill="#4F46E5"/>
+  <text x="170" y="320" text-anchor="middle" font-size="11" fill="#4F46E5" font-weight="600">48 req/s</text>
+  <text x="300" y="197" text-anchor="middle" font-size="11" fill="#4F46E5" font-weight="600">82 req/s</text>
+  <text x="430" y="128" text-anchor="middle" font-size="11" fill="#4F46E5" font-weight="600">108 req/s</text>
+  <text x="576" y="123" text-anchor="start" font-size="11" fill="#4F46E5" font-weight="600">110 req/s</text>
+
+  <!-- Plateau annotation -->
+  <line x1="430" y1="110" x2="430" y2="430" stroke="#94A3B8" stroke-width="1" stroke-dasharray="3 4"/>
+
+  <!-- Legend -->
+  <g font-size="11.5">
+    <line x1="140" y1="500" x2="164" y2="500" stroke="#B45309" stroke-width="2.5"/>
+    <circle cx="152" cy="500" r="4.5" fill="#B45309"/>
+    <text x="172" y="504" fill="#1B2430">CheckoutWorkflow p95 latency</text>
+
+    <line x1="140" y1="522" x2="164" y2="522" stroke="#4F46E5" stroke-width="2.5"/>
+    <circle cx="152" cy="522" r="4.5" fill="#4F46E5"/>
+    <text x="172" y="526" fill="#1B2430">CheckoutWorkflow throughput</text>
+  </g>
+
+  <!-- Insight callout -->
+  <text x="440" y="200" font-size="11" fill="#5B6472" font-style="italic">throughput saturates at 5 partitions;</text>
+  <text x="440" y="216" font-size="11" fill="#5B6472" font-style="italic">latency keeps improving through 10 &#8212;</text>
+  <text x="440" y="232" font-size="11" fill="#5B6472" font-style="italic">bottleneck has shifted off Kafka</text>
+  </g>
+</svg>

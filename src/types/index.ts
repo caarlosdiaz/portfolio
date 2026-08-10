@@ -64,4 +64,5 @@ export interface HeaderProps {
 export interface TechnologyProps {
   name: string;
   image: string;
+  lightBg?: boolean;
 }

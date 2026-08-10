@@ -65,6 +65,28 @@ const Transformers: TechnologyProps = {
   image: "/hf-logo.svg",
 };
 
+const PyTerrier: TechnologyProps = {
+  name: "Terrier",
+  image: "/terrier.png",
+  lightBg: true,
+};
+
+const Kafka: TechnologyProps = {
+  name: "Kafka",
+  image: "/kafka.png",
+  lightBg: true,
+};
+
+const Orleans: TechnologyProps = {
+  name: "Microsoft Orleans",
+  image: "/orleans.png",
+};
+
+const Redis: TechnologyProps = {
+  name: "Redis",
+  image: "/redis.png",
+};
+
 export const SITE_CONFIG: SiteConfig = {
   title: "Carlos Díaz - Software Engineer",
   author: "Carlos Díaz Abad",
@@ -150,11 +172,26 @@ export const SITE_CONTENT: SiteContent = {
   ],
   projects: [
     {
+      name: "Search Engine with LLM-based Retrieval",
+      date: "2026 - University of Copenhagen",
+      summary:
+        "BM25 and LM retrieval pipelines built with PyTerrier over 152K documents and 10K queries, analyzing preprocessing trade-offs between index size, latency, and ranking quality. Added LLM-based query expansion (hypothetical-answer prompting) and bi-encoder/cross-encoder re-ranking, quantifying each method's quality gain against its latency cost — cross-encoder re-ranking gave the best quality-per-millisecond trade-off.",
+      image: "/search_engine_quality_latency.svg",
+      technologies: [Python, PyTerrier, Transformers],
+    },
+    {
+      name: "Stateful FaaS Platform",
+      date: "2026 - University of Copenhagen",
+      summary:
+        "A stateful Function-as-a-Service platform (Microsoft Orleans, Kafka, Redis) with multi-step workflow orchestration and exactly-once processing over Kafka's at-least-once delivery, using idempotency keys and atomic Redis transactions. Benchmarked under concurrent load, showing throughput scaling from 50 to 110 req/s while p95 latency dropped from 225ms to 44ms as Kafka partitions increased from 1 to 10, with contention analyzed via compare-and-set retry rates under skewed traffic.",
+      image: "/faas_throughput_latency.svg",
+      technologies: [DotNet, Kafka, Redis, Orleans],
+    },
+    {
       name: "Hybrid Recommender System",
       date: "2025 - University of Copenhagen",
       summary:
         "Collaborative filtering (KNN, SVD via scikit-surprise) and content-based (TF-IDF, GloVe, DistilBERT via HF transformers) models on a 98% sparse Amazon dataset, with NumPy/Pandas feature pipelines. A Reciprocal Rank Fusion ensemble of SVD + TF-IDF lifted coverage from 20% to 40% while preserving ranking quality. Also explored Qwen 3.5-4B item descriptions as a metadata replacement.",
-      linkSource: "https://github.com/caarlosdiaz/recsys-ucph",
       image: "/hybrid_recommender_architecture.svg",
       technologies: [Python, PyTorch, Pandas, Transformers],
     },

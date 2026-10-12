@@ -113,16 +113,28 @@ export const SITE_CONTENT: SiteContent = {
     name: "Carlos Díaz",
     specialty: "Software Engineer",
     summary:
-      "Based in Copenhagen. I work on applied ML research end-to-end, from model design to the pipelines and compute that run it.",
+      "Based in Zurich. I work on applied ML research end-to-end, from model design to the pipelines and compute that run it.",
   },
   experience: [
+    {
+      company: "ETH Zurich",
+      position: "Student Researcher",
+      department:
+        "Efficient Architectures and Systems Lab (EASL), Institute for Computing Platforms - Systems Group",
+      startDate: "September 2026",
+      endDate: "Present",
+      summary: [
+        "Conducting research on root cause analysis (RCA) for AI inference system failures under Prof. Ana Klimović, reproducing failure cases from industry AI serving deployments with vLLM, characterizing multi-agent diagnostic behavior, and studying telemetry boundaries for accurate RCA.",
+      ],
+      technologies: [],
+    },
     {
       company: "Denmark Technical University",
       position: "Research Software Engineer",
       department:
         "Department of Applied Mathematics and Computer Science - Dynamical Systems Section",
       startDate: "November 2025",
-      endDate: "Present",
+      endDate: "August 2026",
       summary: [
         "Build and maintain a data pipeline processing 30 years of weather, road survey, and maintenance data across millions of road segments in Denmark, extending to European cities including Lisbon, Zagreb, Zilina, and Tartu in collaboration with local road authorities.",
         "Implement road deterioration forecasting using Dynamic Bayesian Networks and Palmgren-Miner fatigue models, integrating short-term and long-term climate forecasts with road condition assessments to optimize maintenance scheduling.",

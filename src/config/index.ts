@@ -229,7 +229,7 @@ export const SITE_CONTENT: SiteContent = {
   ],
   about: {
     description: `
-      Hi, I’m Carlos Díaz, a research software engineer based in Copenhagen, working across ML and software engineering. I’m currently at the Technical University of Denmark, where I build probabilistic models and data pipelines that forecast road deterioration across European cities. I’m also doing an MSc in Computer Science at the University of Copenhagen, and in 2026 I’ll be at ETH Zürich on a SEMP scholarship. Before research, I shipped production services in C#/.NET, including HL7 FHIR healthcare integrations. Outside of work, I enjoy prototyping product ideas with friends.
+      Hi, I’m Carlos Díaz, a research software engineer based in Zurich, working across ML and software engineering. I’m currently at ETH Zurich researching about AI inference systems, their failures in production, and to explore the boundary needed to mitigate those issues with agentic systems. Previously I worked at the Technical University of Denmark, where I built probabilistic models and data pipelines that forecast road deterioration across European cities. I’m also doing an MSc in Computer Science at the University of Copenhagen, currently on exchange at ETH Zürich on a SEMP scholarship. Before research, I shipped production services in C#/.NET, including HL7 FHIR healthcare integrations. Outside of work, I enjoy prototyping product ideas with friends.
     `,
     image: "/carlos_big.jpeg",
   },
